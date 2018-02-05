@@ -1,3 +1,57 @@
-body {
-    background: black;
+.main {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 200px;
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
 }
+
+.text_wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+}
+
+.button_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.author {
+    font-size: 16px;
+}
+
+ .new_quote {
+    background-color: rgb(95,202,198);
+	color: white;
+	border:  0.5px solid #c9d0e1;
+	border-radius: 4px;
+	width: 130px;
+	height: 40px;
+	outline: 0;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+ .twit {
+    display: flex;
+    justify-content: center;
+	border:  0.5px solid #c9d0e1;
+	border-radius: 4px;
+	width: 40px;
+	height: 38px;
+	outline: 0;
+    cursor: pointer;
+    margin-top: 25px;
+   
+ }
+
+.twit_img {
+    width: 52px;
+    position: relative;
+    top: -9px;
+}
+
