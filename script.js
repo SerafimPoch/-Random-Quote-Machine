@@ -6,36 +6,37 @@ const random    = 'https://random-quote-generator.herokuapp.com/api/quotes/rando
 const twitter   = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text='
 
 
+const randomQuote = async x => {
+    let response = await fetch(x)
+    let data = await response.json()
+        buttonClick(data)
+
+        console.log(data)                 
+}
+
+
+ 
 const buttonClick = x => {
-    new_quote.addEventListener('click', () => {
-       quote.innerHTML  = x.quote
-       author.innerHTML = x.author 
-    randomQuote(random)       
-   }) 
+    let dark =  () => {
+        quote.innerHTML  = x.quote
+        author.innerHTML = x.author
+    new_quote.removeEventListener('click',dark) 
+     randomQuote(random)
+    }
+    new_quote.addEventListener('click',dark)
    twitButton(quote.innerHTML)
+    
 }
 
 const twitButton = x => {
     twit.addEventListener('click', () => {
         window.open(twitter+x)
-    }) 
+    })
 }
 
 
 
 
 
-const randomQuote = async x => {
-    let response = await fetch(x)
-    let data = await response.json()
-        buttonClick(data)                  
-}
 
-
-randomQuote(random) 
- 
-
-
-
-
-
+randomQuote(random)
