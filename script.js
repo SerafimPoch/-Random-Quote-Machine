@@ -17,7 +17,7 @@ const buttonClick = x => {
 
 const twitButton = x => {
     twit.addEventListener('click', () => {
-       location.href = twitter + x
+        window.open(twitter+x)
     }) 
 }
 
